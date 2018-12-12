@@ -1,0 +1,15 @@
+#main-cont {
+	display: grid;
+	grid-template-columns: 18vw 70vw;
+	overflow: hidden;
+	font-family: "Yu Gothic UI";
+}
+
+#background-image {
+	position: fixed;
+	z-index: -1;
+	height: 150%;
+	top: -20%;
+	left: -20%;
+	opacity: 0.1
+}

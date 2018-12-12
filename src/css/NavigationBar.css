@@ -1,0 +1,45 @@
+#navi-cont {
+	width: 15vw;
+	height: 100%;
+	position: fixed;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#navi-sub-cont {
+	margin-top: auto;
+	margin-bottom: auto;
+	text-align: right;
+	border-right: .3vw solid #FAA52D;
+}
+
+#name {
+	font-family: Yu Gothic UI Semibold;
+	font-size: 2vw;
+	color: #FAA52D;
+	border-radius: 3px;
+	padding: .3vw .5vw;
+}
+
+#selected {
+	color: black;
+}
+
+.nav-link {
+	font-family: "Yu Gothic UI Light";
+	text-decoration: none;
+	color: grey;
+	font-size: 1.5vw;
+	transition: all .1s;
+}
+
+.nav-link:hover {
+	transition: all .1s;
+	font-size: 1.7vw;
+}
+
+.nav-element {
+	margin-bottom: 1.5vw;
+	padding-right: .5vw;
+	height: 2vw;
+}
