@@ -5,6 +5,7 @@ import NavigationBar from './NavigationBar.jsx'
 import ProjectList from './ProjectList.jsx'
 import HomeApp from './Home.jsx'
 import DashApp from './Dash.jsx'
+import DashTextSelectApp from './Dash-TextSelect.jsx'
 import RedesignApp from './Redesign.jsx'
 import './css/App.css';
 import Dash from './images/dash.PNG'
@@ -12,6 +13,9 @@ import Antonios from './images/antonios.PNG'
 import CanaryTech from './images/canarytech.PNG'
 import Watson from './images/watson.jpg'
 import Shell from './images/shell.PNG'
+import TextSelectImage from './images/textSelect.PNG'
+import DatabaseImage from './images/database.PNG'
+import TravelogueImage from './images/travelogue.PNG'
 
 const projects = [
 	{name: "Dash", tech: "Research, C#, XAML, HCI, UIUX", purpose: "Research Project", img: Dash, linkTo: "dash.html",
@@ -26,13 +30,22 @@ const projects = [
 		timeline: "October 2018", date: 201810},
 ]
 
+const dashProjects = [
+	{name: "PDF Text Selection", date: 201810, img: TextSelectImage, timeline: "September 2018",
+		tech: "Determining the best order of selecting text on a PDF", purpose: "Research Project"},
+	{name: "PDF Database", date: 201811, img: DatabaseImage, timeline: "October 2018",
+		tech: "Optimizing PDF loading through a database and caching layer", purpose: "Research Project"},
+	{name: "Event Travelogue", date: 201811, img: TravelogueImage,
+		tech: "Recording important actions and putting them in a travelogue", timeline: "November 2018", purpose: "Research Project"}
+]
+
 class App extends Component {
 	constructor(props) {
 		super(props)
 
 		this.state = {
 			backgroundTransform: 0,
-			page: "antonio's pizza website redesign"
+			page: "pdf text selection"
 		}
 	}
 
@@ -62,7 +75,8 @@ class App extends Component {
 			<div id="main-cont" ref="mainDiv">
 				<img id="background-image" src={Signature} style={{marginLeft: this.state.backgroundTransform}} />
 				<HomeApp parent={this} />
-				<DashApp parent={this} project={projects[0]} />
+				<DashApp parent={this} project={projects[0]} projects={dashProjects} />
+				<DashTextSelectApp parent={this} project={dashProjects[0]} />
 				<RedesignApp parent={this} project={projects[1]} />
 				<NavigationBar parent={this} />
 				<ProjectList parent={this} />

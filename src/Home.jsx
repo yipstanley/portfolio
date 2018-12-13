@@ -69,7 +69,7 @@ class HomeApp extends Component {
 				<div id="home-desc">
 					My name is <u style={{color: "#FAA52D"}}><b>Stanley Yip</b></u>. I live in Providence, Rhode Island, but I was raised in Las Vegas, Nevada.
 					<br />
-					Currently, I am a first-year student at Brown University most likely studying Mathematics and Computer Science.
+					Currently, I am a sophomore at Brown University most likely studying Mathematics and Computer Science.
 					<br />
 					I am {this.state.whatAmI}.
 				</div>

@@ -2,21 +2,13 @@ import React, { Component } from 'react';
 import './css/Dash.css';
 import ContentBlock from './ContentBlock.jsx'
 import ProjectCard from './ProjectCard.jsx'
-import TextSelectImage from './images/textSelect.PNG'
-import DatabaseImage from './images/database.PNG'
-import TravelogueImage from './images/travelogue.PNG'
 
-const sections = ["INTRODUCTION:", "WORK:", "PROJECTS:"]
+const sections = ["INTRO:", "PURPOSE:", "WORK:", "PROJECTS:"]
 const descriptions = [
 	"Dash is an integrated environment for information management and gathering and the primary focus of Prof. Andy van Dam's Pen and Touch research lab. After joining his group late freshman spring, I've learned more from this research group than I have in any other class I've taken so far.",
+	"Dash is part of a series of projects that have tried to reconsider ideas presented in Vannevar Bush's As We May Think, and is focused on expanding the boundaries that the 1945 article describes.",
 	"During my time so far at Dash, I've worked on many different projects. Follow one of the links below to read more about selected individual projects.",
 	""
-]
-
-const dashProjects = [
-	{name: "PDF Text Selection", date: 201810, img: TextSelectImage, tech: "Determining the best order of selecting text on a PDF"},
-	{name: "PDF Database", date: 201811, img: DatabaseImage, tech: "Optimizing PDF loading through a database and caching layer"},
-	{name: "Event Travelogue", date: 201811, img: TravelogueImage, tech: "Recording important actions and putting them in a travelogue"}
 ]
 
 class Dash extends Component {
@@ -43,7 +35,7 @@ class Dash extends Component {
 	}
 
 	renderProjects() {
-		const items = dashProjects.map(item => <ProjectCard parent={this} element={item} />)
+		const items = this.props.projects.map(item => <ProjectCard parent={this} element={item} />)
 		return items
 	}
 
