@@ -8,6 +8,47 @@
 	flex-wrap: wrap
 }
 
+#project-cont {
+	grid-column: 2;
+	margin: 5vw;
+	display: flex;
+	flex-direction: column;
+}
+
+#title {
+	font-size: 3vw;
+	font-family: Avenir LT Std;
+	font-weight: bolder;
+	color: #FAA52D;
+	border-bottom: .2vw solid #FAA52D;
+}
+
+#info-cont {
+	margin-top: 1vw;
+}
+
+.project-sub-img {
+	width: 100%;
+}
+
+.content-block {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	margin-top: 1vw;
+}
+
+.content-block-section {
+	font-size: 1.5vw;
+	font-weight: bold;
+	font-family: Yu Gothic UI Semibold;
+	text-align: right;
+	margin-right: 1vw;
+}
+
+.content-block-content {
+	font-size: 1.2vw;
+}
+
 .project-card-cont {
 	width: 32vw;
 	height: 21vw;

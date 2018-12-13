@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import './css/ProjectList.css';
 
 class ProjectCard extends Component {
+	constructor(props) {
+		super(props)
+
+		this.imgClicked = this.imgClicked.bind(this)
+	}
+
 	imgClicked() {
-		
+		this.props.parent.props.parent.setState({
+			page: this.props.element.name
+		})
 	}
 
 	render() {
