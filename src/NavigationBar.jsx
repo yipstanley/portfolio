@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './css/NavigationBar.css';
+import Resume from './images/Yip.Stanley.2021.pdf'
 
 class NavigationBar extends Component {
 	constructor(props) {
@@ -12,21 +13,29 @@ class NavigationBar extends Component {
 	}
 
 	workClicked() {
-		this.props.parent.setState({
-			page: "work"
-		})
+		if (this.props.parent.state.page !== "work") {
+			this.props.parent.fadeTo("work")
+
+			this.refs.work.id = "selected"
+			this.refs.about.id = ""
+		}
 	}
 
 	aboutClicked() {
-		this.props.parent.setState({
-			page: "about"
-		})
+		if (this.props.parent.state.page !== "about") {
+			this.props.parent.fadeTo("about")
+			this.refs.work.id = ""
+			this.refs.about.id = "selected"
+		}
 	}
 
 	homeClicked() {
-		this.props.parent.setState({
-			page: "index"
-		})
+		this.props.parent.moveToHome();
+		setTimeout(() => {
+			this.props.parent.setState({
+				page: "index"
+			})
+		}, 600)
 	}
 
 	getDisplay() {
@@ -44,15 +53,15 @@ class NavigationBar extends Component {
 					<div id="horiz-line"></div>
 
 					<div className="nav-element">
-						<a onClick={this.workClicked} className="nav-link" id="selected">WORK</a>
+						<a onClick={this.workClicked} className="nav-link" ref="work">WORK</a>
 					</div>
 
 					<div className="nav-element">
-						<a onClick={this.aboutClicked}  className="nav-link">ABOUT</a>
+						<a onClick={this.aboutClicked}  className="nav-link" ref="about">ABOUT</a>
 					</div>
 
 					<div className="nav-element">
-						<a href="#" className="nav-link">RESUME</a>
+						<a href={Resume} target="_blank" className="nav-link">RESUME</a>
 					</div>
 				</div>
 			</div>

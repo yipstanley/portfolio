@@ -5,7 +5,6 @@ import OldInterface from './images/redesign/old-antonios.PNG'
 import Wireframe from './images/redesign/wireframe.png'
 import HiFi from './images/redesign/hifi.PNG'
 import AnnotatedHiFi from './images/redesign/hifi-annotate.jpg'
-import Final from './images/redesign/Redesign.mp4'
 
 const sections = ["INTRO:", "", "USABILITY:", "HIGH-FIDELITY:", "", "DEVELOPMENT:", "CONCLUSION:"]
 const descriptions = [
@@ -67,6 +66,10 @@ class Redesign extends Component {
 					{this.renderInfo(5, 6)}
 					<ContentBlock section="" content={<img className="project-sub-img" src={AnnotatedHiFi} />} />
 					{this.renderInfo(6, 7)}
+					<div id="redesign-bottom-row">
+						<div id="redesign-frame-cont"><iframe id="redesign-frame" src="http://www.stanleyyip.com/redesign/responsive.html" allowfullscreen></iframe></div>
+						<div>Go to <a href="http://www.stanleyyip.com/redesign/responsive.html" target="_blank">the full site</a> for a better experience!</div>
+					</div>
 				</div>
 			</div>
 		);

@@ -9,9 +9,7 @@ class ProjectCard extends Component {
 	}
 
 	imgClicked() {
-		this.props.parent.props.parent.setState({
-			page: this.props.element.name
-		})
+		this.props.parent.props.parent.fadeTo(this.props.element.name)
 	}
 
 	render() {

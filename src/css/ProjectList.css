@@ -17,7 +17,7 @@
 
 #title {
 	font-size: 3vw;
-	font-family: Avenir LT Std;
+	font-family: Montserrat, sans-serif;
 	font-weight: bolder;
 	color: #FAA52D;
 	border-bottom: .2vw solid #FAA52D;
@@ -27,8 +27,19 @@
 	margin-top: 1vw;
 }
 
+#info-sub {
+	margin-top: 4vw;
+	margin-bottom: 4vw;
+	font-size: 2vw;
+	text-align: center;
+	font-family: Open Sans, sans-serif;
+	font-weight: 600;
+	color: #FAA52D;
+}
+
 .project-sub-img {
 	width: 100%;
+	box-shadow: .2vw .2vw .3vw 0 #888888;
 }
 
 .content-block {
@@ -39,8 +50,8 @@
 
 .content-block-section {
 	font-size: 1.5vw;
-	font-weight: bold;
-	font-family: Yu Gothic UI Semibold;
+	font-family: Open Sans, sans-serif;
+	font-weight: 600;
 	text-align: right;
 	margin-right: 1vw;
 }
@@ -66,11 +77,13 @@
 	grid-template-rows: 32vw;
 	grid-template-columns: 18vw;
 	background-color: white;
+	box-shadow: .2vw .2vw .3vw 0 #888888;
+	margin-bottom: .3vw;
 }
 
 .project-img:hover {
 	transition: all .3s;
-	transform: scale(1.2);
+	transform: scale(1.1);
 	opacity: 0.5;
 	cursor: pointer;
 }
@@ -92,10 +105,12 @@
 }
 
 .project-name {
-	font-family: "Yu Gothic UI Semibold"
+	font-family: "Open Sans", sans-serif;
+	font-weight: 600;
 }
 
 .project-tech {
-	font-family: "Yu Gothic UI Light";
+	font-weight: 300;
+	font-family: "Open Sans", sans-serif;
 	font-size: 1vw;
 }

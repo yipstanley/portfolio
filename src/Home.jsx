@@ -4,10 +4,12 @@ import Me from './images/me.jpg'
 import LinkedIn from './images/linkedin.png'
 import Facebook from './images/facebook.png'
 import Gmail from './images/gmail.png'
+import Resume from './images/Yip.Stanley.2021.pdf'
 
-const identities = ["a programmer", "a pianist", "a graphic designer", "a student", "a son", "a low-income student",
+const identities = ["a pianist", "a graphic designer", "a student", "a son", "a low-income student",
 	"a musician", "a leader", "a grandson", "a self-proclaimed nerd", "a brother", "an optimist", "a firm believer in people",
 	"a first-generation student"];
+
 let index = 0;
 
 class HomeApp extends Component {
@@ -25,15 +27,21 @@ class HomeApp extends Component {
 	}
 
 	workClicked() {
+		this.props.parent.moveFromHome()
 		this.props.parent.setState({
 			page: "work"
 		})
+		this.props.parent.refs.navi.refs.work.id = "selected"
+		this.props.parent.refs.navi.refs.about.id = ""
 	}
 
 	aboutClicked() {
+		this.props.parent.moveFromHome()
 		this.props.parent.setState({
 			page: "about"
 		})
+		this.props.parent.refs.navi.refs.about.id = "selected"
+		this.props.parent.refs.navi.refs.work.id = ""
 	}
 
 	componentDidMount() {
@@ -41,10 +49,7 @@ class HomeApp extends Component {
 	}
 
 	getDisplay() {
-		if (this.props.parent.state.page === "index") {
-			return {display: "grid"}
-		}
-		return {display: "none"}
+		return {display: "grid"}
 	}
 
 	whatAmI() {
@@ -61,17 +66,21 @@ class HomeApp extends Component {
 		setTimeout(this.whatAmI, 1000)
 	}
 
+	resumeClicked() {
+		window.open(Resume, "_blank")
+	}
+
 	render() {
 		return (
 			<div id="home" style={this.getDisplay()}>
 				<div className="avenir" id="hey-there">Hey there!</div>
 
 				<div id="home-desc">
-					My name is <u style={{color: "#FAA52D"}}><b>Stanley Yip</b></u>. I live in Providence, Rhode Island, but I was raised in Las Vegas, Nevada.
+					My name is <b style={{color: "#FAA52D", fontWeight: 600}}>Stanley Yip</b>.
 					<br />
-					Currently, I am a sophomore at Brown University most likely studying Mathematics and Computer Science.
+					I'm a full stack developer that wants to make people's lives easier.
 					<br />
-					I am {this.state.whatAmI}.
+					I'm also {this.state.whatAmI}.
 				</div>
 
 				<div className="avenir" id="home-learn">Learn more about me</div>
@@ -79,15 +88,15 @@ class HomeApp extends Component {
 				<div id="home-links-cont">
 					<div className="home-links" onClick={this.workClicked}>WORK</div>
 					<div className="home-links" onClick={this.aboutClicked}>ABOUT</div>
-					<div className="home-links">RESUME</div>
+					<div className="home-links" onClick={this.resumeClicked}>RESUME</div>
 				</div>
 
 				<div className="avenir" id="home-contact">Let's get in touch</div>
 
 				<div id="home-contact-links-cont">
-					<img className="home-contact-link" src={LinkedIn} />
-					<img className="home-contact-link" src={Facebook} />
-					<img className="home-contact-link" src={Gmail} />
+					<a href="https://www.linkedin.com/in/stanley-yip/" target="_blank"><img className="home-contact-link" src={LinkedIn} /></a>
+					<a href="https://www.facebook.com/stanleyyip99" target="_blank"><img className="home-contact-link" src={Facebook} /></a>
+					<a href="mailto:stanley_yip@brown.edu" target="_blank"><img className="home-contact-link" src={Gmail} /></a>
 				</div>
 
 				<img src={Me} id="me" />

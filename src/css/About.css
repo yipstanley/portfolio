@@ -1,0 +1,33 @@
+#about-cont {
+	grid-column: 2;
+	margin: 5vw;
+	display: grid;
+	grid-template-rows: 10vh 60vh;
+	grid-template-columns: 40vw 20vw;
+}
+
+#about-content {
+	font-size: 1.5vw;
+	margin-top: 2vw;
+	font-weight: 300;
+	font-family: "Open Sans", sans-serif;
+}
+
+#about-me {
+	grid-column: 2;
+	grid-row: 2;
+	margin-top: 10vh;
+	width: 120%;
+	transform: rotate(86deg);
+	border: .8vw solid white;
+	box-shadow: .5vw -.5vw 1vw 0 #888888;
+}
+
+#about-contact-links-cont {
+	grid-column: 1;
+	display: flex;
+	width: 15vw;
+	margin-top: 3vw;
+	margin-left: 3vw;
+	justify-content: space-around;
+}

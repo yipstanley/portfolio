@@ -1,15 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,400,600|Raleway:200');
+
 #main-cont {
 	display: grid;
 	grid-template-columns: 18vw 70vw;
 	overflow: hidden;
-	font-family: "Yu Gothic UI";
+	font-family: "Open Sans", sans-serif;
+	padding-left: 100vw;
+}
+
+#app-cont {
+	grid-column: 2
 }
 
 #background-image {
 	position: fixed;
 	z-index: -1;
 	height: 150%;
-	top: -20%;
-	left: -20%;
-	opacity: 0.1
+	top: -30%;
+	left: 0%;
+	opacity: 0.2;
+	transition: all .5s;
+}
+
+#gallery-cont {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#cover-pane {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	background-color: black;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	margin-left: -100vw;
+}
+
+#redesign-frame {
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
+#redesign-frame-cont {
+	overflow-x: auto;
+	overflow-y: hidden;
+	resize: both;
+	width: 70vw;
+	height: 45vw;
+	display: flex;
+}
+
+#redesign-bottom-row {
+	height: 100vh;
+	grid-column: 1/3;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+#cover-hey-there {
+	margin-left: 5vw;
+	margin-top: 5vw;
+	color: white;
+	font-weight: bold;
+	font-size: 5vw;
+	font-family: Montserrat, sans-serif;
+}
+
+#loading {
+	color: white;
+	font-size: 3vw;
+	text-align: center;
+	margin-top: 4vw;
+	align-self: center;
+}
+
+.gallery-img {
+	width: 100%;
+	box-shadow: .2vw .2vw .3vw 0 #888888;
+	margin: 0;
+}
+
+.gallery-link {
+	width: 30%;
+	margin-top: 2vw;
 }
