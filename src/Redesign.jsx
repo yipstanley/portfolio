@@ -68,7 +68,7 @@ class Redesign extends Component {
 					{this.renderInfo(6, 7)}
 					<div id="redesign-bottom-row">
 						<div id="redesign-frame-cont"><iframe id="redesign-frame" src="http://www.stanleyyip.com/redesign/responsive.html" allowfullscreen></iframe></div>
-						<div>Go to <a href="http://www.stanleyyip.com/redesign/responsive.html" target="_blank">the full site</a> for a better experience!</div>
+						<div>Go to <a href="http://www.stanleyyip.com/redesign/responsive.html" target="_blank">the full site</a> for a better experience, or see the <a href="https://github.com/yipstanley/ui_redesign" target="_blank">raw code</a>!</div>
 					</div>
 				</div>
 			</div>

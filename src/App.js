@@ -70,6 +70,7 @@ class App extends Component {
 	}
 
 	animateStart() {
+		console.log()
 		if (i < heyThere.length) {
 			let char = heyThere.charAt(i)
 			let speed = 100;
@@ -88,7 +89,6 @@ class App extends Component {
 
 	animateLoading() {
 		if (i < 25) {
-			console.log(i)
 			if (i < loading.length) {
 				let char = loading.charAt(i)
 				let speed = 100;
@@ -199,12 +199,6 @@ class App extends Component {
 		})
 		return (
 			<div id="main-cont" ref="mainDiv">
-				<div id="cover-pane" ref="coverPane">
-					<div id="cover-hey-there" ref="coverHey">
-					</div>
-					<div id="loading" ref="loading">
-					</div>
-				</div>
 				<img id="background-image" src={Signature} style={this.getDisplay()} />
 				<HomeApp parent={this} />
 				<div id="app-cont" ref="appCont">
@@ -220,6 +214,12 @@ class App extends Component {
 					<ProjectList parent={this} />
 				</div>
 				<NavigationBar parent={this} ref="navi" />
+				<div id="cover-pane" ref="coverPane">
+					<div id="cover-hey-there" ref="coverHey">
+					</div>
+					<div id="loading" ref="loading">
+					</div>
+				</div>
 			</div>
 		);
 	}

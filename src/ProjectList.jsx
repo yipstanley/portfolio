@@ -29,7 +29,8 @@ class ProjectList extends Component {
 		const items = this.props.parent.getProjects().map(item => {
 			return <ProjectCard parent={this} element={item} />
 		});
-		return items.sort(this.sortByName);
+		return items;
+		//return items.sort(this.sortByName);
 	}
 }
 

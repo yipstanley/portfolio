@@ -35,6 +35,7 @@ class NavigationBar extends Component {
 			this.props.parent.setState({
 				page: "index"
 			})
+			console.log("nice");
 		}, 600)
 	}
 
