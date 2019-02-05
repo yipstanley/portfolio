@@ -8,7 +8,7 @@ import Sketch4 from './images/iterative/sketch4.PNG'
 import HomeHeatmap from './images/iterative/home-heatmap.png'
 import GuestHeatmap from './images/iterative/guest-heatmap.png'
 
-const sections = ["DISCLAIMER:","INTRO:", "", "ESSENTIALS:", "SKETCHES", "PROTOTYPING:", "CRITIQUE:", "EYETRACKING:", "THE TASK:", "RESULTS:", "CONCLUSION:"]
+const sections = ["DISCLAIMER:","INTRO:", "", "ESSENTIALS:", "SKETCHES", "PROTOTYPING:", "CRITIQUE:", "EYETRACKING:", "THE TASK:", "RESULTS:", "CONCLUSION:", "NEXT STEPS:"]
 const descriptions = [
 	"I do not work for Canary Technologies, this was a school project.",
 	"Coming from Las Vegas, I've seen my fair share of hotels. Often times, the entire process of staying at a hotel is difficult and time-consuming. When you arrive, you're expected to wait, sometimes hours, just to get your payment through, sign contracts, and retrieve your room key.",
@@ -20,7 +20,8 @@ const descriptions = [
 	"The next stage of the project was to analyze eye-tracking results to see if users were paying attention to the parts wanted them to focus on. To do this, we first drew up a hypothesis based on our experience with the interface, and set up an eye-tracker and got a participant to perform a task.",
 	'"You are an employee at the Hotel CIT, and a customer (Jon Cho) has called in and wants to check some information. Use this interface to help answer Jon Cho\'s questions. Firstly, check Jon Cho\’s reservation and extend his stay, if possible.  Determine if Jon Cho has completed his contract so that he may participate in the Yoga class this morning. In addition, he\’d like to know how many other people signed up for the yoga class. Lastly, sign out."',
 	"From these heatmaps, we were able to determine that the home page was the least confusing page, whereas the guest page was one of the most confusing. With this information, we knew that we should make changes to the less intuitive pages to make navigating those pages simpler and easier to use, but ultimately, most of the results turned out to be positive.",
-	"This project was difficult, and certainly took a lot of time and teamwork. By the end of the project, though we were all done with hotels and canaries, I personally felt that I learned a significant amount regarding the importance of iterative design. More abstractly, I felt that I gained more insight into the importance of having multiple sets of eyes designing an interface. Though there were times of disagreement, having the privilege of bouncing ideas of one another turned the process into a much more enjoyable one."
+	"This project was difficult, and certainly took a lot of time and teamwork. By the end of the project, though we were all done with hotels and canaries, I personally felt that I learned a significant amount regarding the importance of iterative design. More abstractly, I felt that I gained more insight into the importance of having multiple sets of eyes designing an interface. Though there were times of disagreement, having the privilege of bouncing ideas of one another turned the process into a much more enjoyable one.",
+	"If we were to continue working on this project, my next step would be to perform more user test, take the information gathered, and continue to build improvements until I feel satisfied before taking time to build and create the application."
 ]
 
 class Iterative extends Component {
@@ -74,7 +75,7 @@ class Iterative extends Component {
 					{this.renderInfo(6, 9)}
 					<ContentBlock section="HEATMAPS:" content={<img className="project-sub-img" src={HomeHeatmap} />} />
 					<ContentBlock section="" content={<img className="project-sub-img" src={GuestHeatmap} />} />
-					{this.renderInfo(9, 11)}
+					{this.renderInfo(9, 12)}
 				</div>
 			</div>
 		);

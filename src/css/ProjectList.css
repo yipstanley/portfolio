@@ -5,7 +5,13 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap
+	flex-wrap: wrap;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 #project-cont {
@@ -21,6 +27,10 @@
 	font-weight: bolder;
 	color: #FAA52D;
 	border-bottom: .2vw solid #FAA52D;
+}
+
+#purpose, #timeline, #back {
+	font-size: 1.4vw;
 }
 
 #info-cont {
@@ -40,6 +50,12 @@
 .project-sub-img {
 	width: 100%;
 	box-shadow: .2vw .2vw .3vw 0 #888888;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .content-block {
@@ -65,6 +81,12 @@
 	height: 21vw;
 	padding: 1vw;
 	text-align: right;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .project-img-cont {

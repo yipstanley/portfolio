@@ -4,6 +4,7 @@ import Me from './images/me2.JPG'
 import LinkedIn from './images/linkedin.png'
 import Facebook from './images/facebook.png'
 import Gmail from './images/gmail.png'
+import Github from './images/github.png'
 
 class AboutMe extends Component {
 	constructor(props) {
@@ -43,9 +44,10 @@ class AboutMe extends Component {
 						<br />
 					Thanks for visiting! Let's connect.
 					<div id="about-contact-links-cont">
-						<img className="home-contact-link" src={LinkedIn} />
-						<img className="home-contact-link" src={Facebook} />
-						<img className="home-contact-link" src={Gmail} />
+						<a href="https://www.linkedin.com/in/stanley-yip/" target="_blank"><img className="home-contact-link" src={LinkedIn} /></a>
+						<a href="https://github.com/yipstanley" target="_blank"><img className="home-contact-link" src={Github} /></a>
+						<a href="https://www.facebook.com/stanleyyip99" target="_blank"><img className="home-contact-link" src={Facebook} /></a>
+						<a href="mailto:stanley_yip@brown.edu" target="_blank"><img className="home-contact-link" src={Gmail} /></a>
 					</div>
 				</div>
 

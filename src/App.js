@@ -6,6 +6,8 @@ import ProjectList from './ProjectList.jsx'
 import HomeApp from './Home.jsx'
 import DashApp from './Dash.jsx'
 import DashTextSelectApp from './Dash-TextSelect.jsx'
+import ShitheadApp from './Shithead.jsx'
+import FocalPointApp from './FocalPoint.jsx'
 import DashDatabaseApp from './Dash-Database.jsx'
 import DashTravelogueApp from './Dash-Travelogue.jsx'
 import RedesignApp from './Redesign.jsx'
@@ -21,16 +23,20 @@ import Shell from './images/shell.PNG'
 import TextSelectImage from './images/textSelect.PNG'
 import DatabaseImage from './images/database.PNG'
 import TravelogueImage from './images/travelogue.PNG'
+import Shithead from './images/shithead.PNG'
+import FocalPoint from './images/focal_point.PNG'
 
 const projects = [
-	{name: "Dash", tech: "Research, C#, XAML, HCI, UIUX", purpose: "Research Project", img: Dash, linkTo: "dash.html",
+	{name: "Dash", tech: "Research, C#, XAML, HCI, UIUX", purpose: "Research Project", img: Dash,
 		date: 999999, timeline: "April 2018 - Present", tools: "C#, XAML, UWP"},
+	{name: "Shithead", tech: "React, Node JS", purpose: "Personal Project", img: Shithead, date: 201812, timeline: "December 2018 - January 2019", tools: "React, Node JS"},
+	{name: "Focal Point @ Brown", tech: "React, JavaScript", purpose: "Personal Project", img: FocalPoint, date: 201901, timeline: "January 26-27", tools: "React, JavaScript"},
 	{name: "Antonio's Pizza Website Redesign", tech: "UIUX, HTML/CSS, JavaScript, Figma, Balsamiq", purpose: "School Project",
 		img: Antonios, linkTo: "redesign.html", date: 201810, timeline: "October 2018", tools: "Figma, Balsamiq, HTML/CSS, JavaScript"},
 	{name: "Canary Technologies", tech: "UIUX, Figma", img: CanaryTech, purpose: "School Project",
 		linkTo: "iterative.html", date: 201811, timeline: "November 2018", tools: "Figma"},
 	{name: "Design @ Watson Institute", tech: "Design, Adobe Illustrator, Adobe Photoshop", timeline: "September 2017 - June 2018",
-		tools: "Adobe Illustrator, Adobe Photoshop", purpose: "Professional Project", img: Watson, linkTo: "watson.html", date: 201800},
+		tools: "Adobe Illustrator, Adobe Photoshop", purpose: "Professional Project", img: Watson, date: 201800},
 ]
 
 const dashProjects = [
@@ -204,9 +210,11 @@ class App extends Component {
 				<div id="app-cont" ref="appCont">
 					<DashApp parent={this} project={projects[0]} projects={dashProjects} />
 					<AboutApp parent={this} />
-					<RedesignApp parent={this} project={projects[1]} />
-					<IterativeApp parent={this} project={projects[2]} />
-					<WatsonApp parent={this} project={projects[3]} />
+					<ShitheadApp parent={this} project={projects[1]} />
+					<FocalPointApp parent={this} project={projects[2]} />
+					<RedesignApp parent={this} project={projects[3]} />
+					<IterativeApp parent={this} project={projects[4]} />
+					<WatsonApp parent={this} project={projects[5]} />
 
 					<DashTextSelectApp parent={this} project={dashProjects[0]} />
 					<DashDatabaseApp parent={this} project={dashProjects[1]} />

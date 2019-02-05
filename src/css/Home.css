@@ -46,14 +46,20 @@
 	grid-template-rows: 5vw 8vw 10vw 4vw 8vw 6vw 5vw 3vw;
 	grid-template-columns: 5vw 65vw 25vw 5vw;
 	margin-left: -100vw;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 #home-contact-links-cont {
 	grid-row: 7;
 	grid-column: 2;
 	display: flex;
-	width: 15vw;
-	margin-left: 3vw;
+	width: 20vw;
+	margin-left: 1vw;
 	justify-content: space-around;
 }
 

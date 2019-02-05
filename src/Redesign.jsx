@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './css/Dash.css';
 import ContentBlock from './ContentBlock.jsx'
-import OldInterface from './images/redesign/old-antonios.PNG'
+import OldInterface from './images/redesign/old-antonios.gif'
 import Wireframe from './images/redesign/wireframe.png'
 import HiFi from './images/redesign/hifi.PNG'
 import AnnotatedHiFi from './images/redesign/hifi-annotate.jpg'
