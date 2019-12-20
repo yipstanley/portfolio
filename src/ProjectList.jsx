@@ -30,7 +30,7 @@ class ProjectList extends Component {
 			return <ProjectCard parent={this} element={item} />
 		});
 		return items;
-		//return items.sort(this.sortByName);
+		// return items.sort(this.sortByName);
 	}
 }
 

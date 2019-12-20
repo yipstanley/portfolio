@@ -24,7 +24,7 @@ class Shithead extends Component {
 	}
 
 	getDisplay() {
-		if (this.props.parent.state.page.toLowerCase() === "shithead") {
+		if (this.props.parent.state.page.toLowerCase() === "threes") {
 			return {display: "flex"}
 		}
 		return {display: "none"}

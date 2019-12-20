@@ -8,8 +8,7 @@ import Github from './images/github.png'
 import Resume from './images/Yip.Stanley.2021.pdf'
 
 const identities = ["a pianist", "a graphic designer", "a student", "a son", "a low-income student",
-	"a musician", "a leader", "a grandson", "a self-proclaimed nerd", "a brother", "an optimist", "a firm believer in people",
-	"a first-generation student"];
+	"a musician", "a leader", "a grandson", "a brother", "an optimist", "a first-generation student", "a programmer"];
 
 let index = 0;
 
@@ -79,7 +78,7 @@ class HomeApp extends Component {
 				<div id="home-desc">
 					My name is <b style={{color: "#FAA52D", fontWeight: 600}}>Stanley Yip</b>.
 					<br />
-					I'm a full stack developer that wants to make people's lives easier.
+					I'm a junior studying CS at <strong>Brown University</strong> that wants to make people's lives easier.
 					<br />
 					I'm also {this.state.whatAmI}.
 				</div>

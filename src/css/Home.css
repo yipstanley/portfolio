@@ -81,8 +81,8 @@
 #me {
 	grid-row: 4/7;
 	grid-column: 3;
-	width: 100%;
-	transform: rotate(93deg);
+	width: 75%;
+	transform: rotate(3deg);
 	border: .8vw solid white;
 	box-shadow: .5vw -.5vw 1vw 0 #888888;
 }
