@@ -17,8 +17,8 @@
 	position: fixed;
 	z-index: -1;
 	height: 150%;
-	top: -30%;
-	left: 0%;
+	top: -35%;
+	left: -10%;
 	opacity: 0.2;
 	transition: all .5s;
 }
@@ -27,6 +27,14 @@
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+}
+
+.title {
+	font-size: 3vw;
+	font-family: Montserrat, sans-serif;
+	font-weight: bolder;
+	color: #FAA52D;
+	border-bottom: .2vw solid #FAA52D;
 }
 
 #cover-pane {

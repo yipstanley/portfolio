@@ -82,7 +82,7 @@
 	grid-row: 4/7;
 	grid-column: 3;
 	width: 100%;
-	transform: rotate(93deg);
+	transform: rotate(3deg) translate(-5vw, -10vw);
 	border: .8vw solid white;
 	box-shadow: .5vw -.5vw 1vw 0 #888888;
 }

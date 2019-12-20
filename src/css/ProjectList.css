@@ -21,14 +21,6 @@
 	flex-direction: column;
 }
 
-#title {
-	font-size: 3vw;
-	font-family: Montserrat, sans-serif;
-	font-weight: bolder;
-	color: #FAA52D;
-	border-bottom: .2vw solid #FAA52D;
-}
-
 #purpose, #timeline, #back {
 	font-size: 1.4vw;
 }
