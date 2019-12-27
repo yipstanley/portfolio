@@ -89,10 +89,15 @@ export enum Paths {
     Bach = "bach%20to%20the%20future"
 }
 
+export enum ExternalPaths {
+    Redesign = "/redesign.html"
+}
+
 const heyThere = "Hey there!"
 const loading = "Getting things ready"
 var i = 0;
 let pathname = window.location.pathname;
+
 var homeMover = pathname === Paths.Home || pathname === Paths.Root ? 100 : 0;
 
 @observer
@@ -152,39 +157,39 @@ export default class Main extends React.Component {
 
     @action
     animateLoading = () => {
-        if (i < 25) {
-            if (i < loading.length) {
-                let char = loading.charAt(i)
-                let speed = 100;
-                this._loadingText += char;
-                i++;
-                setTimeout(this.animateLoading, speed)
-            }
-            else {
-                let content = loading
-                let val = (i - loading.length) % 4
-                i++
-                if (val == 0) {
-                    content += ""
-                }
-                else if (val == 1) {
-                    content += "."
-                }
-                else if (val == 2) {
-                    content += ".."
-                }
-                else if (val == 3) {
-                    content += "..."
-                }
-                this._loadingText = content;
-                setTimeout(this.animateLoading, 200)
-            }
-        }
-        else {
+        // if (i < 25) {
+        //     if (i < loading.length) {
+        //         let char = loading.charAt(i)
+        //         let speed = 100;
+        //         this._loadingText += char;
+        //         i++;
+        //         setTimeout(this.animateLoading, speed)
+        //     }
+        //     else {
+        //         let content = loading
+        //         let val = (i - loading.length) % 4
+        //         i++
+        //         if (val == 0) {
+        //             content += ""
+        //         }
+        //         else if (val == 1) {
+        //             content += "."
+        //         }
+        //         else if (val == 2) {
+        //             content += ".."
+        //         }
+        //         else if (val == 3) {
+        //             content += "..."
+        //         }
+        //         this._loadingText = content;
+        //         setTimeout(this.animateLoading, 200)
+        //     }
+        // }
+        // else {
             this._loadingText = "";
             i = 1;
             this.removeCover()
-        }
+        // }
     }
 
     @action
