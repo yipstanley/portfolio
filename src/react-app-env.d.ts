@@ -2,6 +2,8 @@
 
 declare module '*.PNG'
 declare module '*.pdf'
+declare module '*.mp3'
+declare module 'react-tex'
 
 declare type Project = {
     name: string,

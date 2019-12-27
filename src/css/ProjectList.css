@@ -50,6 +50,10 @@
 	user-select: none;
 }
 
+.project-sub-audio {
+	width: 100%;
+}
+
 .content-block {
 	display: grid;
 	grid-template-columns: 1fr 4fr;

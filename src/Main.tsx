@@ -11,6 +11,7 @@ import FocalPointApp from './FocalPoint'
 import DashDatabaseApp from './Dash-Database'
 import DashTravelogueApp from './Dash-Travelogue'
 import RedesignApp from './Redesign'
+import WordGuiderApp from "./WordGuider"
 import IterativeApp from './Iterative'
 import AboutApp from './About'
 import WatsonApp from './Watson'
@@ -18,6 +19,7 @@ import BachApp from "./Bach"
 import './css/App.css';
 import * as Dash from './images/dash.PNG'
 import Antonios from './images/antonios.PNG'
+import WordGuider from "./images/word_guider.PNG"
 import CanaryTech from './images/canarytech.PNG'
 import Watson from './images/watson.jpg'
 import Bach from "./images/bach.PNG";
@@ -37,6 +39,7 @@ export const Projects: Project[] = [
         name: "Bach to the Future", tech: "Deep Learning, Tensorflow, GCP", purpose: "School Project", img: Bach,
         date: 201912, timeline: "November 2019 - December 2019", tools: "Python, Tensorflow, GCP"
     },
+    { name: "WordGuider", tech: "Python, OpenCV, NumPy", purpose: "School Project", img: WordGuider, date: 201904, timeline: "April 2019 - May 2019", tools: "Python, OpenCV, NumPy" },
     { name: "Threes", tech: "React, Node JS", purpose: "Personal Project", img: Threes, date: 201812, timeline: "December 2018 - January 2019", tools: "React, Node JS" },
     { name: "Focal Point @ Brown", tech: "React, JavaScript", purpose: "Personal Project", img: FocalPoint, date: 201901, timeline: "January 26-27", tools: "React, JavaScript" },
     {
@@ -78,6 +81,7 @@ export enum Paths {
     DashDB = "pdf%20database",
     DashTravelogue = "event%20travelogue",
     Threes = "threes",
+    WordGuider = "wordguider",
     FocalPoint = "focal%20point%20%40%20brown",
     Redesign = "antonio's%20pizza%20website%20redesign",
     Iterative = "canaray%20technologies",
@@ -266,16 +270,18 @@ export default class Main extends React.Component {
                 return <DashApp setPage={this.setPage} project={Projects[0]} />
             case Paths.Bach:
                 return <BachApp setPage={this.setPage} project={Projects[1]} />
+            case Paths.WordGuider:
+                return <WordGuiderApp setPage={this.setPage} project={Projects[2]} />
             case Paths.Threes:
-                return <ThreesApp setPage={this.setPage} project={Projects[2]} />
+                return <ThreesApp setPage={this.setPage} project={Projects[3]} />
             case Paths.FocalPoint:
-                return <FocalPointApp setPage={this.setPage} project={Projects[3]} />
+                return <FocalPointApp setPage={this.setPage} project={Projects[4]} />
             case Paths.Redesign:
-                return <RedesignApp setPage={this.setPage} project={Projects[4]} />
+                return <RedesignApp setPage={this.setPage} project={Projects[5]} />
             case Paths.Iterative:
-                return <IterativeApp setPage={this.setPage} project={Projects[5]} />
+                return <IterativeApp setPage={this.setPage} project={Projects[6]} />
             case Paths.Watson:
-                return <WatsonApp setPage={this.setPage} project={Projects[6]} />
+                return <WatsonApp setPage={this.setPage} project={Projects[7]} />
             case Paths.DashPDF:
                 return <DashTextSelectApp setPage={this.setPage} project={DashProjects[0]} />
             case Paths.DashDB:
@@ -287,9 +293,9 @@ export default class Main extends React.Component {
     }
 
     render() {
-        console.log(this._page)
         return (
             <div id="main-cont" style={{ paddingLeft: `${this._mainLeftPad}vw` }}>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css" integrity="sha384-BTL0nVi8DnMrNdMQZG1Ww6yasK9ZGnUxL1ZWukXQ7fygA1py52yPp9W4wrR00VML" crossOrigin="anonymous"></link>
                 <img id="background-image" src={Signature} style={{ display: this._page === "index" ? "initial" : "none" }} />
                 <HomeApp setPage={this.setPage} goHome={this.goHome} currPage={this.page} leaveHome={this.moveFromHome} />
                 <div id="app-cont" style={{ opacity: this._appOpacity }}>

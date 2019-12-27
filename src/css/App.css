@@ -118,6 +118,7 @@
 .iframe {
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
+	transform: scale(1);
 }
 
 .table {

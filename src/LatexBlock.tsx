@@ -3,7 +3,12 @@ import './css/ProjectList.css';
 import { Tex } from 'react-tex';
 import ContentBlock from './ContentBlock';
 
-class LatexBlock extends Component {
+export interface LatexBlockProps {
+    section: string,
+    equation: string
+}
+
+export default class LatexBlock extends Component<LatexBlockProps> {
     render() {
         return (
             <ContentBlock section={this.props.section} content={
@@ -14,6 +19,3 @@ class LatexBlock extends Component {
         );
     }
 }
-
-
-export default LatexBlock;
