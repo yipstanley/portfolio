@@ -4,3 +4,7 @@
 	width: 70vw;
 	margin-top: 1vw;
 }
+
+#back {
+	cursor: pointer
+}

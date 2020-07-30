@@ -23,7 +23,7 @@ import WordGuider from "./images/word_guider.PNG"
 import CanaryTech from './images/canarytech.PNG'
 import Watson from './images/watson.jpg'
 import Bach from "./images/bach.PNG";
-import TextSelectImage from './images/textSelect.PNG'
+import TextSelectImage from './images/textSelect.gif'
 import DatabaseImage from './images/database.PNG'
 import TravelogueImage from './images/travelogue.PNG'
 import Threes from './images/threes.PNG'
